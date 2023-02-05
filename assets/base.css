@@ -1,0 +1,66 @@
+:root {
+    --black-color: #000;
+    --white-color: #fff;
+    --text-color: #333;
+    --searchbar-width: 
+}
+
+* {
+    /* Kế thừa thuộc tính từ thẻ cha */
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    /* Border-box sẽ cho các thẻ cha và thẻ con sẽ được kế thừa (inherit) khai báo ở trên */
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+}
+
+.grid {
+    /* Nếu chiều ngang screen lớn hơn 1200px thì set = 1200px còn nếu bé hơn thì set = 100% width hiện có */
+    width: 1200px;
+    max-width: 100%;
+    /* căn giữa */
+    margin: 0 auto; 
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.grid__col-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__col-2-4 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 20%;
+}
+
+.grid__col-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3333%;
+}
+
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
