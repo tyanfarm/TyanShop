@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./assets/grid.css">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/base.css">
     <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
 </head>
 <body>
@@ -16,7 +18,7 @@
         <!-- HEADER -->
         <header class="header">
             <!-- NAVBAR -->
-            <div class="navbar">
+            <div class="navbar hide-tablet-mobile">
                 <!-- TEXT -->
                 <ul class="navbar__list">
                     <li class="navbar__item navbar__url-qr">
@@ -95,12 +97,18 @@
             
             <!-- SEARCH SECTION -->
             <div class="header__details">
-                <div class="header__logo">
+                <!-- MOBILE RESPONSIVE -->
+                <input type="checkbox" hidden id="header__nav-mobile">
+                <label for="header__nav-mobile" class="header__search-mobile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+
+                <div class="header__logo hide-tablet">
                     <i class="fa-solid fa-bag-shopping"></i>
                     Tyan
                 </div>
         
-                <div class="header__search mt-left-32">
+                <div for="header__nav-mobile" class="header__search hide-mobile">
                     <div class="header__search-section">
                         <input type="text" placeholder="Đăng ký và nhận voucher mới đến 70k!" class="header__search-bar border-right js-searchbar">
                         <div class="header__search-section-subnav js-searchbar-container">
@@ -140,9 +148,9 @@
     
         <!-- CONTAINER -->
         <div class="container">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col-2 container__filter">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 c-0 container__filter">
                         <div class="container__filter-title">
                             <i class="fa-sharp fa-solid fa-filter"></i>
                             Bộ lọc tìm kiếm
@@ -327,8 +335,8 @@
                         <div class="container__filter-btn">XÓA TẤT CẢ</div>
                     </div>
         
-                    <div class="grid__col-10 container__display">
-                        <div class="container__display-header">
+                    <div class="col l-10 m-12 c-12 container__display">
+                        <div class="container__display-header hide-tablet-mobile">
                             <div class="container__display-header-element">
                                 <div class="container__display-header-text">Sắp xếp theo</div>
                                 <div class="container__display-header-title bg-main-color white-text">Liên Quan</div>
@@ -357,13 +365,11 @@
                         </div>
 
                         <div class="container__display-category">
-                            <div class="grid__row mt-top-18 mt-bot-360">
-                                <div class="grid__col-2-4">
+                            <div class="row">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+                                        
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -389,12 +395,10 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -420,12 +424,9 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -451,12 +452,9 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -482,12 +480,9 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -511,78 +506,12 @@
 
                                         </div>
                                     </div>
-                                </div>                           
-                            </div>
-
-                            <div class="grid__row mt-bot-360">
-                                <div class="grid__col-2-4">
+                                </div> 
+                                
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+                                        
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -608,76 +537,10 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
+                                        <div class="container__display-category-item-img"></div>
 
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>                           
-                            </div>
-
-                            <div class="grid__row mt-bot-360">
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -703,105 +566,9 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -825,16 +592,11 @@
 
                                         </div>
                                     </div>
-                                </div>                           
-                            </div>
+                                </div>
 
-                            <div class="grid__row mt-bot-360">
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -860,12 +622,38 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
                                         </div>
+                                    </div>
+                                </div>     
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -891,12 +679,10 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -922,12 +708,37 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -953,12 +764,9 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -982,47 +790,12 @@
 
                                         </div>
                                     </div>
-                                </div>                           
-                            </div>
+                                </div>     
 
-                            <div class="grid__row mt-bot-360">
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+                                        
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1048,12 +821,10 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1079,12 +850,37 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1110,12 +906,9 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1139,47 +932,12 @@
 
                                         </div>
                                     </div>
-                                </div>                           
-                            </div>
+                                </div>     
 
-                            <div class="grid__row mt-bot-360">
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
-                                        <div class="container__display-category-item-details">
-                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
-                                            <div class="container__display-category-item-tag">
-                                                <div class="container__display-category-item-tag-child">
-                                                    Mua Kèm Deal Sốc
-                                                </div>                                                    
-                                            </div>
-                                            <div class="container__display-category-item-price">
-                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
-                                                <div class="container__display-category-item-price-child">đ45.000</div>
-                                            </div>
-                                            <div class="container__display-category-item-rate">
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <i class="fa-solid fa-star shopee-color"></i>
-                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
-                                            </div>
-                                            <div class="container__display-category-item-location">Hà Nội</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="grid__col-2-4">
-                                    <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+                                        
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1205,12 +963,10 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
+
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1236,12 +992,37 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1267,12 +1048,9 @@
                                     </div>
                                 </div>
 
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <div class="container__display-category-item">
-                                        <div class="container__display-category-item-img">
-                                            <img src="./assets/img/item/1.jpg" alt="" class="container__display-category-item-img-child">
-                                            <img src="./assets/img/item/frame.png" alt="" class="container__display-category-item-img-child">
-                                        </div>
+                                        <div class="container__display-category-item-img"></div>
                                         <div class="container__display-category-item-details">
                                             <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
                                             <div class="container__display-category-item-tag">
@@ -1296,7 +1074,291 @@
 
                                         </div>
                                     </div>
-                                </div>                           
+                                </div>     
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>     
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="container__display-category-item">
+                                        <div class="container__display-category-item-img"></div>
+                                        <div class="container__display-category-item-details">
+                                            <div class="container__display-category-item-name">Áo Giữ Nhiệt Nam Dài Tay Cao Cấp VESCA N</div>
+                                            <div class="container__display-category-item-tag">
+                                                <div class="container__display-category-item-tag-child">
+                                                    Mua Kèm Deal Sốc
+                                                </div>                                                    
+                                            </div>
+                                            <div class="container__display-category-item-price">
+                                                <div class="container__display-category-item-price-child container__display-category-item-price-child--disabled">đ58.000</div>
+                                                <div class="container__display-category-item-price-child">đ45.000</div>
+                                            </div>
+                                            <div class="container__display-category-item-rate">
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <i class="fa-solid fa-star shopee-color"></i>
+                                                <div class="container__display-category-item-sell">Đã bán 2,8k</div>
+                                            </div>
+                                            <div class="container__display-category-item-location">Hà Nội</div>
+
+                                        </div>
+                                    </div>
+                                </div>     
                             </div>
                         </div>
 
@@ -1323,9 +1385,9 @@
     
         <footer class="footer">
             <div class="footer__line"></div>
-            <div class="grid">
-                <div class="grid__row footer__content">
-                    <div class="grid__col-2-4">
+            <div class="grid wide">
+                <div class="row footer__content">
+                    <div class="col l-2-4 m-4 c-12">
                         <div class="footer__text">
                             <div class="footer__text-title mt-bot-12">
                                 Chăm sóc khách hàng
@@ -1363,7 +1425,7 @@
                             </div>                            
                         </div>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-12">
                         <div class="footer__text">
                             <div class="footer__text-title mt-bot-12">
                                 Về Tyan
@@ -1397,7 +1459,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-12">
                         <div class="footer__text">
                             <div class="footer__text-title mt-bot-24">
                                 Thanh Toán
@@ -1430,7 +1492,7 @@
                             <img src="./assets/img/footer/18.png" alt="" class="footer__text-img">
                         </div>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-12">
                         <div class="footer__text">
                             <div class="footer__text-title mt-bot-12">
                                 Theo Dõi Chúng Tôi Trên
@@ -1449,7 +1511,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-12">
                         <div class="footer__text">
                             <div class="footer__text-title mt-bot-24">
                                 Tải ứng dụng shopee ngay thôi
